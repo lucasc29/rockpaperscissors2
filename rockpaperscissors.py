@@ -2,8 +2,9 @@ import streamlit as st
 from numpy import random
 
 st.title('The Rock Paper Scissors Game')
+st.subheader('This is single round Rock Paper Scissors game.')
 
-player = st.text_input("Select Rock, Paper, or Scissor :").lower()
+player = st.text_input("Type Rock, Paper, or Scissor :").lower()
 
 if st.button("Begin Game"):
     if player == "rock" or player == "paper" or  player == "scissors":
