@@ -1,4 +1,5 @@
 import streamlit as st
+import numpy as random
 st.title('Rock Paper Scissor Game...')
 
 player = st.text_input("Select Rock, Paper, or Scissor :").lower()
