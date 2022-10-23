@@ -1,21 +1,23 @@
 import streamlit as st
-import numpy as random
-st.title('Rock Paper Scissor Game...')
+from numpy import random
+
+st.title('The Rock Paper Scissors Game')
 
 player = st.text_input("Select Rock, Paper, or Scissor :").lower()
+
 
 if st.button("Begin Game"):
     computer = random.choice(["Rock", "Paper", "Scissor"]).lower()
     st.write("Computer selected: ", computer)
     if player == "rock" and computer == "paper":
-        st.write("Computer Won... 📄 beats 🪨")
+        st.write("Computer Won")
     elif player == "paper" and computer == "scissor":
-        st.write("Computer Won... ✄ beats 📄")
+        st.write("Computer Won")
     elif player == "scissor" and computer == "rock":
-        st.write("Computer Won... 🪨 beats✄")
+        st.write("Computer Won")
     elif player == computer:
-        st.write("You both chose the same item")
+        st.write("Tie")
     else:
-        st.write("You beat the computer")
+        st.write("You Won")
 else:
-    st.write("After typing your choice, hit enter and then the \'begin game\' button")
+    st.write("Please type your chosen weapon and then click the begin game button")
