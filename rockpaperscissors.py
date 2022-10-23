@@ -5,9 +5,8 @@ st.title('The Rock Paper Scissors Game')
 
 player = st.text_input("Select Rock, Paper, or Scissor :").lower()
 
-
 if st.button("Begin Game"):
-    if player != "rock" or player != "paper" or  player != "scissors":
+    if player == "rock" or player == "paper" or  player == "scissors":
         computer = random.choice(["Rock", "Paper", "Scissor"]).lower()
         st.write("Computer selected: ", computer)
         if player == "rock" and computer == "paper":
