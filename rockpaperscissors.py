@@ -5,24 +5,22 @@ st.title('The Rock Paper Scissors Game')
 
 player = st.text_input("Select Rock, Paper, or Scissor :").lower()
 
-
-if st.button("Begin Game"):
-    def check_user_input(player):
+def check_user_input(player):
+    try:
+        # Convert it into integer
+        val = str(input)
+        st.write("Input Accepted...", val)
+    except ValueError:
         try:
-            # Convert it into integer
-            val = str(input)
-            st.write("Input Accepted...", val)
+            # Convert it into float
+            val = float(input)
+            st.write("Input is a float  number. Number = ", val)
         except ValueError:
-            try:
-                # Convert it into float
-                val = float(input)
-                st.write("Input is a float  number. Number = ", val)
-            except ValueError:
-                st.write("No.. input is not number. It's a string")
+            st.write("No.. input is not number. It's a string")
 
 check_user_input(player)
 
-
+if st.button("Begin Game"):
     if player == "rock" or player == "paper" or  player == "scissors":
         computer = random.choice(["Rock", "Paper", "Scissor"]).lower()
         st.write("Computer selected: ", computer)
