@@ -21,6 +21,6 @@ if st.button("Begin Game"):
         else:
             st.write("You Won")
     else:
-        st.write("Please enter rock, paper or scissors...")
+        st.write("Input Error : Please enter only rock, paper or scissors...")
 else:
     st.write("Please type your chosen weapon and then click the begin game button")
