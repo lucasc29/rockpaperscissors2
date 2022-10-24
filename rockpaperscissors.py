@@ -13,7 +13,6 @@ player = str(st.text_input("Type Rock, Paper, or Scissor :")).lower()
 if st.button("Begin Game"):
     # Checks input is string
     if player.isalpha():
-        st.write("Input accepted...")
         #checks input is from selected choices.
         if player == "rock" or player == "paper" or  player == "scissors":
             # computer randomly chooses from 3 choices
