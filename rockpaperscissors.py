@@ -20,8 +20,11 @@ if st.button("Begin Game"):
             # computer randomly chooses from 3 choices
             computer = random.choice(["Rock", "Paper", "Scissors"]).lower()
             #outputs computer selection
-            st.write("Computer chose : ", computer)            
+            st.write("Computer chose : ", computer)
             #shows the action of the game
+            with st.spinner('Wait for it...'):
+                time.sleep(2)
+            st.success('GO!')
             time.sleep(0.5)
             st.write("Rock...")
             time.sleep(0.5)
