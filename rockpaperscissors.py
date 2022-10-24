@@ -29,7 +29,7 @@ if st.button("Begin Game"):
             elif player == computer:
                 st.write("Tie")
             else:
-                st.write("You Won")
+                st.write("You Won 🎉")
         else:
             st.write("NameError : Please enter only rock, paper or scissors...")
     else:
