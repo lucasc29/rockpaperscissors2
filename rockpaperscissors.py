@@ -19,14 +19,14 @@ if st.button("Begin Game"):
         if player == "rock" or player == "paper" or  player == "scissors":
             # computer randomly chooses from 3 choices
             computer = random.choice(["Rock", "Paper", "Scissor"]).lower()
+            #outputs computer selection
+            st.write("Computer selected: ", computer)            
             #shows computer thinking
             st.write("The computer is thinking...")
             my_bar = st.progress(0)
             for percent_complete in range(100):
-                time.sleep(0.02)
+                time.sleep(0.1)
                 my_bar.progress(percent_complete + 1)
-            #outputs computer selection
-            st.write("Computer selected: ", computer)
             #calculates winner
             if player == "rock" and computer == "paper":
                 st.write("Computer Won 😔")
