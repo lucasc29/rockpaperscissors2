@@ -20,7 +20,7 @@ if st.button("Begin Game"):
             # computer randomly chooses from 3 choices
             computer = random.choice(["Rock", "Paper", "Scissor"]).lower()
             #outputs computer selection
-            st.write("Computer selected: ", computer)            
+            st.write("Computer chose : ", computer)            
             #shows computer thinking
             st.write("The computer is thinking...")
             my_bar = st.progress(0)
