@@ -21,12 +21,7 @@ if st.button("Begin Game"):
             computer = random.choice(["Rock", "Paper", "Scissors"]).lower()
             #outputs computer selection
             st.write("Computer chose : ", computer)
-            #shows computer thinking  
             time.sleep(1)
-            my_bar = st.progress(0)
-            for percent_complete in range(100):
-                time.sleep(0.01)
-                my_bar.progress(percent_complete + 1)
             #shows the action of the game
             with st.spinner('Wait for it...'):
                 time.sleep(1.5)
