@@ -25,7 +25,7 @@ if st.button("Begin Game"):
             
             #outputs computer selection
             st.write("Computer chose : ", computer)
-            time.sleep(1)
+            time.sleep(0.2)
             
             #shows the action of the game
             with st.spinner('Processing...'):
