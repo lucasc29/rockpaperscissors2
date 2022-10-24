@@ -24,7 +24,7 @@ if st.button("Begin Game"):
             #shows computer thinking
             st.write("The computer is thinking...")
             for percent_complete in range(100):
-                time.sleep(0.08)
+                time.sleep(0.02)
                 my_bar.progress(percent_complete + 1)
             #outputs computer selection
             st.write("Computer selected: ", computer)
