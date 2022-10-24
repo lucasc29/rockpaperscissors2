@@ -18,7 +18,7 @@ if st.button("Begin Game"):
         #checks input is from selected choices.
         if player == "rock" or player == "paper" or  player == "scissors":
             # computer randomly chooses from 3 choices
-            computer = random.choice(["Rock", "Paper", "Scissor"]).lower()
+            computer = random.choice(["Rock", "Paper", "Scissors"]).lower()
             #outputs computer selection
             st.write("Computer chose : ", computer)            
             #shows the action of the game
@@ -38,10 +38,10 @@ if st.button("Begin Game"):
             if player == "rock" and computer == "paper":
                 time.sleep(1)
                 st.header("Computer Won 😔")
-            elif player == "paper" and computer == "scissor":
+            elif player == "paper" and computer == "scissors":
                 time.sleep(1)
                 st.header("Computer Won 😔")
-            elif player == "scissor" and computer == "rock":
+            elif player == "scissors" and computer == "rock":
                 time.sleep(1)
                 st.header("Computer Won 😔")
             elif player == computer:
