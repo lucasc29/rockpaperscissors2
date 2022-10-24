@@ -21,19 +21,20 @@ if st.button("Begin Game"):
             st.write("Computer selected: ", computer)
             #calculates winner
             if player == "rock" and computer == "paper":
-                st.write("Computer Won")
+                st.write("Computer Won 😔")
             elif player == "paper" and computer == "scissor":
-                st.write("Computer Won")
+                st.write("Computer Won 😔")
             elif player == "scissor" and computer == "rock":
-                st.write("Computer Won")
+                st.write("Computer Won 😔")
             elif player == computer:
-                st.write("Tie")
+                st.write("Tie 🫤")
             else:
                 st.write("You Won 🎉")
+                st.baloons()
         else:
-            st.write("NameError : Please enter only rock, paper or scissors...")
+            st.error("NameError : Please enter only rock, paper or scissors...")
     else:
-        st.write("TypeError : Please only enter input as a string.")         
+        st.error("TypeError : Please only enter input as a string.")         
 #instructs user how to use the app.
 else:
-    st.write("Please type your chosen item, click the enter key and then click the begin game button.")
+    st.warning("Please type your chosen item, click the enter key and then click the begin game button.")
