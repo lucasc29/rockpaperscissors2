@@ -1,8 +1,8 @@
-#allows for use of streamlit API
+#allows for use of streamlit
 import streamlit as st
 #allows computer to choose random selection
 from numpy import random
-#allows progressing "thinking" bar
+#allows progressing "thinking" bar and code waiting
 import time
 
 #title of the app
@@ -51,7 +51,7 @@ if st.button("Begin Game"):
                 time.sleep(0.5)
                 st.header("You Won 🎉")
                 time.sleep(0.5)
-                st.balloons()
+                st.balloons(0.5)
         else:
             st.error("NameError : Please enter only rock, paper or scissors...")
     else:
