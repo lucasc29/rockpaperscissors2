@@ -30,7 +30,7 @@ if st.button("Begin Game"):
                 st.write("Tie 🫤")
             else:
                 st.write("You Won 🎉")
-                st.baloons()
+                st.balloons()
         else:
             st.error("NameError : Please enter only rock, paper or scissors...")
     else:
