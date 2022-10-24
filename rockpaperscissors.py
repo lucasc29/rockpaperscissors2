@@ -28,7 +28,8 @@ if st.button("Begin Game"):
             st.write("Paper...")
             time.sleep(0.5)
             st.write("Scissors...")
-            #shows computer thinking          
+            #shows computer thinking  
+            time.sleep(1)
             my_bar = st.progress(0)
             for percent_complete in range(100):
                 time.sleep(0.015)
