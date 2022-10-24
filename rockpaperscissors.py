@@ -37,4 +37,4 @@ if st.button("Begin Game"):
         st.write("TypeError : Please only enter input as a string.")         
 #instructs user how to use the app.
 else:
-    st.write("Please type your chosen item, click the enter key and then click the begin game button."
+    st.write("Please type your chosen item, click the enter key and then click the begin game button.")
