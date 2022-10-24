@@ -1,31 +1,40 @@
+#allows for use of streamlit API
 import streamlit as st
+#allows computer to choose random selection
 from numpy import random
 
+#title of the app
 st.title('The Rock Paper Scissors Game')
 st.caption('This is single round Rock Paper Scissors game.')
 
-player = st.text_input("Type Rock, Paper, or Scissor :").lower()
+#user input box
+player = str(st.text_input("Type Rock, Paper, or Scissor :")).lower()
 
 if st.button("Begin Game"):
-    try:
-        scraped_data = urllib.request.urlopen(title)
-    except ValueError:
-        st.error("Please enter a valid input")
-
-    if player == "rock" or player == "paper" or  player == "scissors":
-        computer = random.choice(["Rock", "Paper", "Scissor"]).lower()
-        st.write("Computer selected: ", computer)
-        if player == "rock" and computer == "paper":
-            st.write("Computer Won")
-        elif player == "paper" and computer == "scissor":
-            st.write("Computer Won")
-        elif player == "scissor" and computer == "rock":
-            st.write("Computer Won")
-        elif player == computer:
-            st.write("Tie")
+    # Checks input is string
+    if player.isalpha():
+        st.write("Input accepted...")
+        #checks input is from selected choices.
+        if player == "rock" or player == "paper" or  player == "scissors":
+            # computer randomly chooses from 3 choices
+            computer = random.choice(["Rock", "Paper", "Scissor"]).lower()
+            #ouputs to user the seleciton of the computer
+            st.write("Computer selected: ", computer)
+            #calculates winner
+            if player == "rock" and computer == "paper":
+                st.write("Computer Won")
+            elif player == "paper" and computer == "scissor":
+                st.write("Computer Won")
+            elif player == "scissor" and computer == "rock":
+                st.write("Computer Won")
+            elif player == computer:
+                st.write("Tie")
+            else:
+                st.write("You Won")
         else:
-            st.write("You Won")
-    else:
-        st.write("Input Error : Please enter only rock, paper or scissors...")
+            st.write("NameError : Please enter only rock, paper or scissors...")
+      else:
+        st.write("TypeError : Please only enter input as a string."
+#instructs user how to use the app.
 else:
-    st.write("Please type your chosen item and then click the begin game button")
+    st.write("Please type your chosen item, click the enter key and then click the begin game button.")
