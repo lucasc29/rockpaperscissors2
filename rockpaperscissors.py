@@ -10,7 +10,7 @@ if st.button("Begin Game"):
     try:
         scraped_data = urllib.request.urlopen(title)
     except ValueError:
-        st.error(‘Please enter a valid input’)
+        st.error("Please enter a valid input")
 
     if player == "rock" or player == "paper" or  player == "scissors":
         computer = random.choice(["Rock", "Paper", "Scissor"]).lower()
