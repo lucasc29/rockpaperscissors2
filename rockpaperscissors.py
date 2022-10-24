@@ -25,7 +25,7 @@ if st.button("Begin Game"):
             st.write("The computer is thinking...")
             my_bar = st.progress(0)
             for percent_complete in range(100):
-                time.sleep(0.1)
+                time.sleep(0.04)
                 my_bar.progress(percent_complete + 1)
             #calculates winner
             if player == "rock" and computer == "paper":
