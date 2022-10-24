@@ -36,7 +36,7 @@ if st.button("Begin Game"):
                 st.write("Paper...")
                 time.sleep(0.5)
                 st.write("Scissors...")
-                st.success('GO!')
+            st.success('GO!')
             #calculates winner
             if player == "rock" and computer == "paper":
                 time.sleep(1)
