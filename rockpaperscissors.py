@@ -36,25 +36,21 @@ if st.button("Begin Game"):
                 my_bar.progress(percent_complete + 1)
             #calculates winner
             if player == "rock" and computer == "paper":
-                time.sleep(0.5)
+                time.sleep(1)
                 st.header("Computer Won 😔")
-                st.snow()
             elif player == "paper" and computer == "scissor":
-                time.sleep(0.5)
+                time.sleep(1)
                 st.header("Computer Won 😔")
-                st.snow()
             elif player == "scissor" and computer == "rock":
-                time.sleep(0.5)
+                time.sleep(1)
                 st.header("Computer Won 😔")
-                st.snow()
             elif player == computer:
-                time.sleep(0.5)
+                time.sleep(1)
                 st.header("Tie 🫤")
-                st.snow()
             else:
-                time.sleep(0.5)
+                time.sleep(1)
                 st.header("You Won 🎉")
-                time.sleep(0.5)
+                time.sleep(1)
                 st.balloons()
         else:
             st.error("NameError : Please enter only rock, paper or scissors...")
