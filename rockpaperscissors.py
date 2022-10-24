@@ -2,10 +2,14 @@
 import streamlit as st
 #allows computer to choose random selection
 from numpy import random
+#allows progressing "thinking" bar
+import time
 
 #title of the app
 st.title('The Rock Paper Scissors Game')
 st.caption('This is single round Rock Paper Scissors game.')
+
+my_bar = st.progress(0)
 
 #user input box
 player = str(st.text_input("Type Rock, Paper, or Scissor :")).lower()
@@ -17,6 +21,11 @@ if st.button("Begin Game"):
         if player == "rock" or player == "paper" or  player == "scissors":
             # computer randomly chooses from 3 choices
             computer = random.choice(["Rock", "Paper", "Scissor"]).lower()
+            #shows computer thinking
+            st.write("The computer is thinking..."
+            for percent_complete in range(100):
+                time.sleep(0.5)
+                my_bar.progress(percent_complete + 1)
             #ouputs to user the seleciton of the computer
             st.write("Computer selected: ", computer)
             #calculates winner
