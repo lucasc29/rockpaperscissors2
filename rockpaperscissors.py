@@ -10,7 +10,7 @@ st.title('The Rock Paper Scissors Game')
 st.caption('This is single round Rock Paper Scissors game.')
 
 #user input box
-player = str(st.text_input("Type Rock, Paper, or Scissor :")).lower()
+player = str(st.text_input("Type Rock, Paper, or Scissors :")).lower()
 
 if st.button("Begin Game"):
     # Checks input is string
