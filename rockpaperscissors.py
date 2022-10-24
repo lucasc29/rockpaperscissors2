@@ -23,8 +23,8 @@ if st.button("Begin Game"):
             st.write("Computer chose : ", computer)
             time.sleep(1)
             #shows the action of the game
-            with st.spinner('Wait for it...'):
-                time.sleep(1.5)
+            with st.spinner('Processing...'):
+                time.sleep(1)
                 time.sleep(0.5)
                 st.write("Rock...")
                 time.sleep(0.5)
