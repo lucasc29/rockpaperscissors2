@@ -29,14 +29,14 @@ if st.button("Begin Game"):
                 my_bar.progress(percent_complete + 1)
             #shows the action of the game
             with st.spinner('Wait for it...'):
-                time.sleep(2)
-            st.success('GO!')
-            time.sleep(0.5)
-            st.write("Rock...")
-            time.sleep(0.5)
-            st.write("Paper...")
-            time.sleep(0.5)
-            st.write("Scissors...")
+                time.sleep(1.5)
+                time.sleep(0.5)
+                st.write("Rock...")
+                time.sleep(0.5)
+                st.write("Paper...")
+                time.sleep(0.5)
+                st.write("Scissors...")
+                st.success('GO!')
             #calculates winner
             if player == "rock" and computer == "paper":
                 time.sleep(1)
