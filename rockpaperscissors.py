@@ -7,21 +7,26 @@ import time
 
 #title of the app
 st.title('The Rock Paper Scissors Game')
-st.caption('This is single round Rock Paper Scissors game.')
 
 #user input box
 player = str(st.text_input("Type Rock, Paper, or Scissors :")).lower()
 
+#starts the game when button is clicked
 if st.button("Begin Game"):
+    
     # Checks input is string
     if player.isalpha():
+        
         #checks input is from selected choices.
         if player == "rock" or player == "paper" or  player == "scissors":
+            
             # computer randomly chooses from 3 choices
             computer = random.choice(["Rock", "Paper", "Scissors"]).lower()
+            
             #outputs computer selection
             st.write("Computer chose : ", computer)
             time.sleep(1)
+            
             #shows the action of the game
             with st.spinner('Processing...'):
                 time.sleep(1)
@@ -33,6 +38,7 @@ if st.button("Begin Game"):
                 st.write("Scissors...")
                 time.sleep(1)
             st.success('GO!')
+            
             #calculates winner
             if player == "rock" and computer == "paper":
                 time.sleep(1)
@@ -52,9 +58,12 @@ if st.button("Begin Game"):
                 time.sleep(1)
                 st.balloons()
         else:
+            #if user enters a string that isnt from the 3 choices
             st.error("NameError : Please enter only rock, paper or scissors...")
     else:
+        #if user enters an integer or float
         st.error("TypeError : Please only enter input as a string.")         
+
 #instructs user how to use the app.
 else:
     st.warning("Please type your chosen item, click the enter key and then click the begin game button.")
