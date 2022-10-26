@@ -2,7 +2,7 @@
 import streamlit as st
 #allows computer to choose random selection
 from numpy import random
-#allows progressing "thinking" bar and code waiting
+#allows progress  thinking and code waiting
 import time
 
 #title of the app
